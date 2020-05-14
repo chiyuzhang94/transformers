@@ -30,6 +30,7 @@ import re
 import shutil
 from typing import Dict, List, Tuple
 
+import json
 import numpy as np
 import torch
 from torch.nn.utils.rnn import pad_sequence
@@ -187,14 +188,25 @@ def mask_tokens(inputs: torch.Tensor, tokenizer: PreTrainedTokenizer, args) -> T
     labels = inputs.clone()
     # We sample a few tokens in each sequence for masked-LM training (with probability args.mlm_probability defaults to 0.15 in Bert/RoBERTa)
     probability_matrix = torch.full(labels.shape, args.mlm_probability)
+
     special_tokens_mask = [
         tokenizer.get_special_tokens_mask(val, already_has_special_tokens=True) for val in labels.tolist()
     ]
     probability_matrix.masked_fill_(torch.tensor(special_tokens_mask, dtype=torch.bool), value=0.0)
+
+    given_tokens_mask = [
+        tokenizer.get_dictionary_mask(val, already_has_given_tokens=True, args= args) for val in labels.tolist()
+        ]
+    probability_matrix.masked_fill_(torch.tensor(given_tokens_mask, dtype=torch.bool), value=1.0)
+
     if tokenizer._pad_token is not None:
         padding_mask = labels.eq(tokenizer.pad_token_id)
         probability_matrix.masked_fill_(padding_mask, value=0.0)
+
+
     masked_indices = torch.bernoulli(probability_matrix).bool()
+
+
     labels[~masked_indices] = -100  # We only compute loss on masked tokens
 
     # 80% of the time, we replace masked input tokens with tokenizer.mask_token ([MASK])
@@ -467,6 +479,11 @@ def main():
     parser.add_argument(
         "--train_data_file", default=None, type=str, required=True, help="The input training data file (a text file)."
     )
+
+    parser.add_argument(
+        "--target_dictionary_file", default=None, type=str, required=True, help="The input directory file that includes task-specific mask tokens."
+    )
+
     parser.add_argument(
         "--output_dir",
         type=str,
@@ -503,7 +520,7 @@ def main():
         "--mlm", action="store_true", help="Train with masked-language modeling loss instead of language modeling."
     )
     parser.add_argument(
-        "--mlm_probability", type=float, default=0.15, help="Ratio of tokens to mask for masked language modeling loss"
+        "--mlm_probability", type=float, default=0.10, help="Ratio of tokens to mask for masked language modeling loss"
     )
 
     parser.add_argument(
@@ -695,6 +712,11 @@ def main():
             "You are instantiating a new tokenizer from scratch. This is not supported, but you can do it from another script, save it,"
             "and load it from here, using --tokenizer_name"
         )
+
+    if args.target_dictionary_file:
+    	with open(args.target_dictionary_file) as f:
+  			load_dictionary = json.load(f)
+    	args.given_dictionary = load_dictionary.values()
 
     if args.block_size <= 0:
         args.block_size = tokenizer.max_len
