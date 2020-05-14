@@ -207,7 +207,7 @@ class RobertaTokenizer(GPT2Tokenizer):
             return [1] + ([0] * len(token_ids_0)) + [1]
         return [1] + ([0] * len(token_ids_0)) + [1, 1] + ([0] * len(token_ids_1)) + [1]
 
-    def get_dictionary_mask(token_ids_0, token_ids_1 = None, already_has_given_tokens = False, given_dictionary = []):
+    def get_dictionary_mask(self, token_ids_0: List[int], token_ids_1: Optional[List[int]] = None, already_has_given_tokens: bool = False, given_dictionary: List[int] = []):
         """
         Retrieves sequence ids from a token list that has target tokens. 
         Args:
