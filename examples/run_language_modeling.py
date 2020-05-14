@@ -716,7 +716,7 @@ def main():
     if args.target_dictionary_file:
     	with open(args.target_dictionary_file) as f:
   			load_dictionary = json.load(f)
-    	args.given_dictionary = load_dictionary.values()
+    	args.given_dictionary = list(load_dictionary.values())
 
     if args.block_size <= 0:
         args.block_size = tokenizer.max_len
