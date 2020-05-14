@@ -207,7 +207,7 @@ class RobertaTokenizer(GPT2Tokenizer):
             return [1] + ([0] * len(token_ids_0)) + [1]
         return [1] + ([0] * len(token_ids_0)) + [1, 1] + ([0] * len(token_ids_1)) + [1]
 
-    def get_dictionary_mask(token_ids_0, token_ids_1 = None, already_has_given_tokens, args):
+    def get_dictionary_mask(token_ids_0, token_ids_1 = None, already_has_given_tokens = False, given_dictionary = []):
         """
         Retrieves sequence ids from a token list that has target tokens. 
         Args:
@@ -227,7 +227,7 @@ class RobertaTokenizer(GPT2Tokenizer):
                     "You should not supply a second sequence if the provided sequence of "
                     "ids is already formated with special tokens for the model."
                 )
-            return list(map(lambda x: 1 if x in args.given_dictionary else 0, token_ids_0))
+            return list(map(lambda x: 1 if x in given_dictionary else 0, token_ids_0))
 
         if token_ids_1 is None:
             return [1] + ([0] * len(token_ids_0)) + [1]

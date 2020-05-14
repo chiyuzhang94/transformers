@@ -195,7 +195,7 @@ def mask_tokens(inputs: torch.Tensor, tokenizer: PreTrainedTokenizer, args) -> T
     probability_matrix.masked_fill_(torch.tensor(special_tokens_mask, dtype=torch.bool), value=0.0)
 
     given_tokens_mask = [
-        tokenizer.get_dictionary_mask(val, already_has_given_tokens=True, args= args) for val in labels.tolist()
+        tokenizer.get_dictionary_mask(val, already_has_given_tokens=True, given_dictionary= args.given_dictionary) for val in labels.tolist()
         ]
     probability_matrix.masked_fill_(torch.tensor(given_tokens_mask, dtype=torch.bool), value=1.0)
 
