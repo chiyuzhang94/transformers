@@ -1,0 +1,651 @@
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "nccl/2.5.6"
+   Try: "module spider nccl/2.5.6" to see how to load the module(s).
+
+
+
+
+Inactive Modules:
+  1) nccl/2.5.6
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cuda/10.0.130     2) openmpi/2.1.1
+
+The following have been reloaded with a version change:
+  1) gcc/7.3.0 => gcc/5.4.0     2) gcccore/.7.3.0 => gcccore/.5.4.0
+
+cdr2585 cdr2589
+cdr2585
+cdr2589
+PROCID: 0
+LOCALID: 0
+PROCID: 1
+LOCALID: 0
+I0630 21:52:43.063818 47293318074048 file_utils.py:41] PyTorch version 1.4.0 available.
+I0630 21:52:43.063930 47410044886720 file_utils.py:41] PyTorch version 1.4.0 available.
+I0630 21:52:43.079759 47250932383424 file_utils.py:41] PyTorch version 1.4.0 available.
+I0630 21:52:43.079871 47450424180416 file_utils.py:41] PyTorch version 1.4.0 available.
+2020-06-30 21:52:46.953697: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer.so.6
+2020-06-30 21:52:46.953698: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer.so.6
+2020-06-30 21:52:46.953813: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer.so.6
+2020-06-30 21:52:46.953812: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer.so.6
+2020-06-30 21:52:46.964178: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer_plugin.so.6
+2020-06-30 21:52:46.964182: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer_plugin.so.6
+2020-06-30 21:52:46.965136: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer_plugin.so.6
+2020-06-30 21:52:46.965143: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer_plugin.so.6
+I0630 21:52:52.159712 47293318074048 file_utils.py:57] TensorFlow version 2.1.0 available.
+I0630 21:52:52.159786 47410044886720 file_utils.py:57] TensorFlow version 2.1.0 available.
+I0630 21:52:52.190380 47450424180416 file_utils.py:57] TensorFlow version 2.1.0 available.
+I0630 21:52:52.190381 47250932383424 file_utils.py:57] TensorFlow version 2.1.0 available.
+Initializes the distributed backend
+0
+Initializes the distributed backend
+0
+Initializes the distributed backend
+1
+Initializes the distributed backend
+1
+W0630 21:52:53.897197 47450424180416 run_language_modeling.py:689] Process rank: 0, device: cuda:0, n_gpu: 2, distributed training: True, 16-bits training: False
+W0630 21:52:53.897200 47250932383424 run_language_modeling.py:689] Process rank: 0, device: cuda:0, n_gpu: 2, distributed training: True, 16-bits training: False
+W0630 21:52:53.929576 47410044886720 run_language_modeling.py:689] Process rank: 1, device: cuda:1, n_gpu: 2, distributed training: True, 16-bits training: False
+W0630 21:52:53.929568 47293318074048 run_language_modeling.py:689] Process rank: 1, device: cuda:1, n_gpu: 2, distributed training: True, 16-bits training: False
+I0630 21:52:54.049306 47450424180416 configuration_utils.py:281] loading configuration file ./sample_config/config.json
+I0630 21:52:54.049517 47250932383424 configuration_utils.py:281] loading configuration file ./sample_config/config.json
+I0630 21:52:54.051038 47250932383424 configuration_utils.py:319] Model config RobertaConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": 0,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": 2,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "min_length": 0,
+  "model_type": "roberta",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50000
+}
+I0630 21:52:54.050976 47450424180416 configuration_utils.py:319] Model config RobertaConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": 0,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": 2,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "min_length": 0,
+  "model_type": "roberta",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50000
+}
+
+
+I0630 21:52:54.053908 47450424180416 configuration_utils.py:281] loading configuration file ./sample_config/config.json
+I0630 21:52:54.055663 47450424180416 configuration_utils.py:319] Model config RobertaConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": 0,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": 2,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "min_length": 0,
+  "model_type": "roberta",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50000
+}
+I0630 21:52:54.055778 47250932383424 configuration_utils.py:281] loading configuration file ./sample_config/config.json
+I0630 21:52:54.056887 47250932383424 configuration_utils.py:319] Model config RobertaConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": 0,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": 2,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "min_length": 0,
+  "model_type": "roberta",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50000
+}
+
+I0630 21:52:54.057431 47250932383424 tokenization_utils.py:420] Model name './sample_config' not found in model shortcut name list (roberta-base, roberta-large, roberta-large-mnli, distilroberta-base, roberta-base-openai-detector, roberta-large-openai-detector). Assuming './sample_config' is a path, a model identifier, or url to a directory containing tokenizer files.
+
+I0630 21:52:54.058190 47450424180416 tokenization_utils.py:420] Model name './sample_config' not found in model shortcut name list (roberta-base, roberta-large, roberta-large-mnli, distilroberta-base, roberta-base-openai-detector, roberta-large-openai-detector). Assuming './sample_config' is a path, a model identifier, or url to a directory containing tokenizer files.
+I0630 21:52:54.184053 47250932383424 tokenization_utils.py:449] Didn't find file ./sample_config/added_tokens.json. We won't load it.
+I0630 21:52:54.184054 47450424180416 tokenization_utils.py:449] Didn't find file ./sample_config/added_tokens.json. We won't load it.
+I0630 21:52:54.184691 47450424180416 tokenization_utils.py:449] Didn't find file ./sample_config/special_tokens_map.json. We won't load it.
+I0630 21:52:54.184823 47250932383424 tokenization_utils.py:449] Didn't find file ./sample_config/special_tokens_map.json. We won't load it.
+I0630 21:52:54.244822 47250932383424 tokenization_utils.py:502] loading file ./sample_config/vocab.json
+I0630 21:52:54.244825 47450424180416 tokenization_utils.py:502] loading file ./sample_config/vocab.json
+I0630 21:52:54.245128 47450424180416 tokenization_utils.py:502] loading file ./sample_config/merges.txt
+I0630 21:52:54.245481 47250932383424 tokenization_utils.py:502] loading file ./sample_config/merges.txt
+I0630 21:52:54.245654 47450424180416 tokenization_utils.py:502] loading file None
+I0630 21:52:54.245921 47250932383424 tokenization_utils.py:502] loading file None
+I0630 21:52:54.246079 47450424180416 tokenization_utils.py:502] loading file None
+I0630 21:52:54.246335 47250932383424 tokenization_utils.py:502] loading file None
+I0630 21:52:54.246481 47450424180416 tokenization_utils.py:502] loading file ./sample_config/tokenizer_config.json
+I0630 21:52:54.246733 47250932383424 tokenization_utils.py:502] loading file ./sample_config/tokenizer_config.json
+I0630 21:52:54.758697 47250932383424 run_language_modeling.py:740] Training new model from scratch
+I0630 21:52:54.759363 47450424180416 run_language_modeling.py:740] Training new model from scratch
+cdr2585:55757:55757 [0] NCCL INFO Bootstrap : Using [0]ib0:172.19.146.22<0>
+cdr2585:55757:55757 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+cdr2585:55757:55757 [0] NCCL INFO NET/IB : Using [0]hfi1_0:1/IB ; OOB ib0:172.19.146.22<0>
+NCCL version 2.4.8+cuda10.1
+cdr2589:161831:161831 [0] NCCL INFO Bootstrap : Using [0]ib0:172.19.146.26<0>
+cdr2589:161832:161832 [1] NCCL INFO Bootstrap : Using [0]ib0:172.19.146.26<0>
+cdr2589:161831:161831 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+cdr2589:161832:161832 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+cdr2589:161832:161832 [1] NCCL INFO NET/IB : Using [0]hfi1_0:1/IB ; OOB ib0:172.19.146.26<0>
+cdr2589:161831:161831 [0] NCCL INFO NET/IB : Using [0]hfi1_0:1/IB ; OOB ib0:172.19.146.26<0>
+cdr2589:161831:161874 [0] NCCL INFO Setting affinity for GPU 0 to 05
+cdr2585:55758:55758 [1] NCCL INFO Bootstrap : Using [0]ib0:172.19.146.22<0>
+cdr2585:55758:55758 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+cdr2585:55758:55758 [1] NCCL INFO NET/IB : Using [0]hfi1_0:1/IB ; OOB ib0:172.19.146.22<0>
+cdr2585:55758:55805 [1] NCCL INFO Setting affinity for GPU 1 to 0a000000
+cdr2589:161832:161872 [1] NCCL INFO CUDA Dev 1[2], IB NIC distance :  SYS
+cdr2589:161831:161874 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  NODE
+cdr2585:55757:55801 [0] NCCL INFO CUDA Dev 0[1], IB NIC distance :  NODE
+cdr2585:55758:55805 [1] NCCL INFO CUDA Dev 1[2], IB NIC distance :  SYS
+cdr2585:55757:55801 [0] NCCL INFO Channel 00 :    0   1   2   3
+cdr2585:55757:55801 [0] NCCL INFO Channel 01 :    0   1   2   3
+cdr2589:161831:161874 [0] NCCL INFO Ring 00 : 1 -> 2 [receive] via NET/IB/0
+cdr2585:55757:55801 [0] NCCL INFO Ring 00 : 3 -> 0 [receive] via NET/IB/0
+cdr2589:161832:161872 [1] NCCL INFO Ring 00 : 3 -> 0 [send] via NET/IB/0
+cdr2589:161831:161874 [0] NCCL INFO Ring 00 : 2[0] -> 3[2] via P2P/IPC
+cdr2585:55757:55801 [0] NCCL INFO Ring 00 : 0[1] -> 1[2] via P2P/IPC
+cdr2585:55758:55805 [1] NCCL INFO Ring 00 : 1 -> 2 [send] via NET/IB/0
+cdr2585:55757:55801 [0] NCCL INFO Ring 01 : 3 -> 0 [receive] via NET/IB/0
+cdr2589:161831:161874 [0] NCCL INFO Ring 01 : 1 -> 2 [receive] via NET/IB/0
+cdr2585:55757:55801 [0] NCCL INFO Ring 01 : 0[1] -> 1[2] via P2P/IPC
+cdr2589:161832:161872 [1] NCCL INFO Ring 01 : 3 -> 0 [send] via NET/IB/0
+cdr2589:161831:161874 [0] NCCL INFO Ring 01 : 2[0] -> 3[2] via P2P/IPC
+cdr2585:55758:55805 [1] NCCL INFO Ring 01 : 1 -> 2 [send] via NET/IB/0
+cdr2585:55757:55801 [0] NCCL INFO Using 256 threads, Min Comp Cap 7, Trees disabled
+cdr2589:161832:161872 [1] NCCL INFO comm 0x2b2004001a30 rank 3 nranks 4 cudaDev 1 nvmlDev 2 - Init COMPLETE
+cdr2585:55757:55801 [0] NCCL INFO comm 0x2b2980001a30 rank 0 nranks 4 cudaDev 0 nvmlDev 1 - Init COMPLETE
+cdr2585:55758:55805 [1] NCCL INFO comm 0x2afb54001a30 rank 1 nranks 4 cudaDev 1 nvmlDev 2 - Init COMPLETE
+cdr2589:161831:161874 [0] NCCL INFO comm 0x2b04c8001a30 rank 2 nranks 4 cudaDev 0 nvmlDev 0 - Init COMPLETE
+cdr2585:55757:55757 [0] NCCL INFO Launch mode Parallel
+I0630 21:53:08.176495 47410044886720 configuration_utils.py:281] loading configuration file ./sample_config/config.json
+I0630 21:53:08.177023 47293318074048 configuration_utils.py:281] loading configuration file ./sample_config/config.json
+I0630 21:53:08.177170 47410044886720 configuration_utils.py:319] Model config RobertaConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": 0,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": 2,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "min_length": 0,
+  "model_type": "roberta",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50000
+}
+
+I0630 21:53:08.177617 47450424180416 run_language_modeling.py:748] Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=512, cache_dir=None, config_name='./sample_config', device=device(type='cuda', index=0), do_eval=False, do_train=True, eval_all_checkpoints=False, eval_data_file=None, evaluate_during_training=False, fp16=False, fp16_opt_level='O1', given_dictionary=[15756, 38606, 9747, 27207, 38422, 12259, 41717, 2351, 10953, 29668, 7246, 41205, 36574, 18777, 20671, 26098, 3569, 30628, 36713, 2793, 23061, 32180, 2148, 9603, 25927, 31584, 33933, 5211, 34190, 3476, 12243, 17245, 20561, 40258, 3655, 15137, 1839, 7493, 19327, 25503, 5238, 15684, 24290, 7740, 27578, 39838, 36227, 27513, 3431, 15319, 24737, 26336, 28684, 29252, 31969, 31920, 2708, 5993, 16758, 21070, 49861, 47377, 48339, 18992, 5534, 7758, 13333, 15534, 17802, 25705, 26631, 30669, 39815, 43822, 3947, 14383, 3583, 5475, 11167, 14454, 3559, 22834, 23020, 4826, 19811, 45610, 15168, 3203, 11497, 22109, 25220, 35711, 46704, 48292, 1I0630 21:53:08.177750 47293318074048 configuration_utils.py:319] Model config RobertaConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": 0,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": 2,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "min_length": 0,
+  "model_type": "roberta",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+6123, 2389, 9472, 1780, 5086, 30002, 2856, 8278, 11496, 19161, 25463, 28090, 35705, 12919, 5987, 7123, 14893, 19879, 23238, 2032, 3023, 4548, 7324, 20840, 30034, 31272, 31497, 41784, 49771, 4358, 8331, 17535, 10435, 4344, 9840, 13709, 7430, 10142, 17508, 23064, 18190, 20250, 47033, 12473, 18586, 2215, 2611, 6903, 8066, 24070, 29038, 13694, 26361, 32713, 2474, 3069, 6656, 27718, 32675, 21341, 31579, 28308, 32768, 7496, 22010, 27997, 17532, 21559, 42324, 16326, 31495, 38127, 7901, 13249, 13466, 30491, 39398, 2807, 10048, 16927, 21868, 28180, 34189, 7146, 14833, 19131, 25116, 34256, 11307, 20362, 32263, 22828, 6403, 29026, 46062, 37297, 3597, 4063, 4365, 9414, 31977, 45605, 6252, 19440, 31351, 11648, 20491, 1495, 8134, 18759, 1062, 5496, 11661, 14508, 24368, 26466, 28654, 34166, 42551, 42552, 49652, 1275, 5268, 10410, 12521, 14207, 14563, 35654, 44843, 3265, 8416, 10686, 19213, 21625, 24799, 49011, 563, 1144, 1987, 2731, 12093, 18890, 24601, 32403, 33587, 33866, 35910, 40613, 46777, 48232, 48547, 49276, 49326, 49809, 39938, 28409, 16442, 43984, 17714, 18212, 44799, 49589, 29562, 31184, 6356, 14641, 19287, 36773, 46932, 8621, 37038, 49850, 11928, 29263, 11779, 46831, 10905, 8152, 19407, 27754, 33997, 35155, 42201, 43854, 47201, 47628, 2912, 11269, 20481, 23977, 36340, 36341, 44929, 48282, 1878, 17596, 19273, 26035, 36109, 36129, 14005, 20783, 2313, 23878, 44905, 28351, 5783, 48353, 16018, 4924, 7971, 1639, 787, 15354, 21383, 25197, 29972, 29973, 31451, 33620, 36622, 38838, 39277, 43088, 45410, 45411, 47366, 48829, 49601, 902, 4955, 5242, 5768, 6183, 9587, 27093, 42533, 44818, 48113, 48347, 3893, 10518, 4082, 8645, 2283, 5908, 6956, 13953, 18126, 18338, 25682, 34508, 44325, 47488, 48974, 49786, 16330, 27411, 15147, 1797, 3272, 5511, 16226, 48215, 18194, 19291, 39022, 21517, 27210, 39928, 2015, 3860, 4480, 9752, 20130, 35158, 28528, 48553, 14687, 28753, 1671, 9336, 13130, 16752, 18565, 19157, 33656, 48205, 19652, 49223, 453, 3168, 4215, 4233, 22854, 23722, 35503, 39334, 43028, 43556, 48231, 48767, 39944, 851, 2169, 991  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50000
+}
+5, 20826, 21769, 22187, 26153, 28348, 29789, 29914, 30403, 33371, 35344, 41028, 41516, 467, 1712, 2711, 2722, 6450, 7164, 8958, 9121, 9988, 10157, 10357, 10528, 10977, 15729, 15945, 17241, 17728, 18112, 19090, 21758, 22855, 23004, 24022, 25311, 25654, 26734, 27491, 28027, 29569, 30059, 30294, 30576, 30786, 31195, 32358, 32825, 33086, 33087, 35001, 35903, 38395, 38795, 40491, 42464, 43386, 43560, 44150, 44743, 45338, 45339, 45974, 45975, 46618, 46960, 47095, 47285, 48023, 48414, 48771, 10653, 43312, 932, 1662, 8629, 10638, 17168, 18128, 20411, 22457, 27056, 29036, 31041, 32889, 33140, 36995, 39321, 40164, 43946, 48925, 34608, 7835, 19518, 6137, 3254, 6993, 13392, 17851, 18038, 18231, 26381, 31069, 31517, 33952, 2896, 14602, 16501, 46818, 7094, 4675, 47564, 49146, 2322, 3746, 4707, 26184, 32929, 33429, 47704, 28853, 6738, 11868, 13251, 35615, 3766, 15052, 15918, 21063, 25096, 36716, 11337, 3189, 10020, 22023, 29061, 19030, 31826, 7633, 46815, 4749, 17090, 25418, 17625, 36446, 38638, 12327, 45063, 49162, 4016, 1
+458, 12920, 26476, 35372, 35524, 42052, 48187, 49706, 6305, 44684, 4246, 9924, 23079, 36727, 46200, 11753, 11299, 15795, 34153, 39679, 5053, 32421, 31917, 18677, 42243, 20799, 16066, 29611, 8016, 8446, 913, 4832, 5681, 10359, 11660, 19547, 23538, 28317, 29793, 31022, 33374, 33627, 33892, 33893, 36959, 41035, 41369, 42536, 43401, 48115, 49621, 49622, 10077, 14179, 15019, 2567, 6161, 9080, 42740, 3391, 26291, 38659, 7510, 21773, 47622, 9338, 26644, 12196, 29821, 31573, 40106, 1709, 7691, 9605, 11311, 14253, 16911, 36417, 43001, 2336, 5148, 6160, 19106, 26328, 34247, 8060, 19406, 1353, 10139, 11344, 11442, 11552, 19926, 24716, 27226, 32879, 36293, 38472, 41559, 48892, 43602, 8864, 8886, 16737, 19288, 22652, 26584, 30353, 37861, 39015, 39602, 41429, 33461, 6203, 32215, 34979, 38373, 46428, 49480, 6521, 14864, 1348, 14749, 8665, 25484, 3298, 3522, 8035, 11181, 19214, 23881, 24280, 3608, 3828, 11515, 21069, 27292, 8871, 44492, 13780, 47720, 10921, 31846, 9045, 44826, 1258, 2709, 3288, 3311, 16930, 20332, 24838, 276I0630 21:53:08.178996 47410044886720 configuration_utils.py:281] loading configuration file ./sample_config/config.json
+88, 29224, 34162, 46811, 48165, 36634, 31753, 2308, 7897, 8532, 13774, 19450, 39757, 44527, 5447, 24309, 34006, 3964, 8603, 12764, 1128, 6171, 7154, 7462, 12227, 14012, 23488, 24256, 27100, 39695, 42562, 42563, 42741, 44250, 44251, 48872, 49663, 8630, 1254, 4033, 10169, 31239, 49907, 29459, 18610, 6498, 27136, 30737, 2907, 14885, 20068, 34504, 40183, 15366, 29927, 14771, 10854, 18707, 42426, 49964, 3356, 14792, 19277, 1123, 4705, 4979, 10444, 24255, 25794, 29987, 30114, 40565, 42561, 44552, 35191, 1204, 2640, 4234, 9965, 11967, 18438, 24373, 24836, 37313, 45456, 2191, 6130], gradient_accumulation_steps=16, learning_rate=0.0001, line_by_line=True, local_rank=0, logging_steps=500, max_grad_norm=1.0, max_steps=-1, mlm=True, mlm_probability=0.1, model_name_or_path=None, model_type='roberta', n_gpu=2, no_cuda=False, num_train_epochs=40.0, output_dir='./sample_model/', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=4, per_gpu_train_batch_size=16, rank=0, save_steps=20, save_total_limit=5, seed=42, server_ip='', server_port='', should_continue=False, target_dictionary_file='./sample_config/given_dict.json', tokenizer_name='./sample_config', train_data_file='./data/sample.txt', warmup_steps=0, weight_decay=0.0, world_size=4)
+I0630 21:53:08.177617 47250932383424 run_language_modeling.py:748] Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=512, cache_dir=None, config_name='./sample_config', device=device(type='cuda', index=0), do_eval=False, do_train=True, eval_all_checkpoints=False, eval_data_file=None, evaluate_during_training=False, fp16=False, fp16_opt_level='O1', given_dictionary=[15756, 38606, 9747, 27207, 38422, 12259, 41717, 2351, 10953, 29668, 7246, 41205, 36574, 18777, 20671, 26098, 3569, 30628, 36713, 2793, 23061, 32180, 2148, 9603, 25927, 31584, 33933, 5211, 34190, 3476, 12243, 17245, 20561, 40258, 3655, 15137, 1839, 7493, 19327, 25503, 5238, 15684, 24290, 7740, 27578, 39838, 36227, 27513, 3431, 15319, 24737, 26336, 28684, 29252, 31969, 31920, 2708, 5993, 16758, 21070, 49861, 47377, 48339, 18992, 5534, 7758, 13333, 15534, 17802, 25705, 26631, 30669, 39815, 43822, 3947, 14383, 3583, 5475, 11167, 14454, 3559, 22834, 23020, 4826, 19811, 45610, 15168, 3203, 11497, 22109, 25220, 35711, 46704, 48292, 16123, 2389, 9472, 1780, 5086, 30002, 2856, 8278, 11496, 19161, 25463, 28090, 35705, 12919, 5987, 7123, 14893, 19879, 23238, 2032, 3023, 4548, 7324, 20840, 30034, 31272, 31497, 41784, 49771, 4358, 8331, 17535, 10435, 4344, 9840, 13709, 7430, 10142, 17508, 23064, 18190, 20250, 47033, 12473, 18586, 2215, 2611, 6903, 8066, 24070, 29038, 13694, 26361, 32713, 2474, 3069, 6656, 27718, 32675, 21341, 31579, 28308, 32768, 7496, 22010, 27997, 17532, 21559, 42324, 16326, 31495, 38127, 7901, 13249, 13466, 30491, 39398, 2807, 10048, 16927, 21868, 28180, 34189, 7146, 14833, 19131, 25116, 34256, 11307, 20362, 32263, 22828, 6403, 29026, 46062, 37297, 3597, 4063, 4365, 9414, 31977, 45605, 6252, 19440, 31351, 11648, 20491, 1495, 8134, 18759, 1062, 5496, 11661, 14508, 24368, 26466, 28654, 34166, 42551, 42552, 49652, 1275, 5268, 10410, 12521, 14207, 14563, 35654, 44843, 3265, 8416, 10686, 19213, 21625, 24799, 49011, 563, 1144, 1987, 2731, 12093, 18890, 24601, 32403, 33587, 33866, 35910, 40613, 46777, 48232, 48547, 49276, 49326, 49809, 39938, 28409, 16442, 43984, 17714, 18212, 44799, 49589, 29562, 31184, 6356, 14641, 19287, 36773, 46932, 8621, 37038, 49850, 11928, 29263, 11779, 46831, 10905, 8152, 19407, 27754, 33997, 35155, 42201, 43854, 47201, 47628, 2912, 11269, 20481, 23977, 36340, 36341, 44929, 48282, 1878, 17596, 19273, 26035, 36109, 36129, 14005, 20783, 2313, 23878, 44905, 28351, 5783, 48353, 16018, 4924, 7971, 1639, 787, 15354, 21383, 25197, 29972, 29973, 31451, 33620, 36622, 38838, 39277, 43088, 45410, 45411, 47366, 48829, 49601, 902, 4955, 5242, 5768, 6183, 9587, 27093, 42533, 44818, 48113, 48347, 3893, 10518, 4082, 8645, 2283, 5908, 6956, 13953, 18126, 18338, 25682, 34508, 44325, 47488, 48974, 49786, 16330, 27411, 15147, 1797, 3272, 5511, 16226, 48215, 18194, 19291, 39022, 21517, 27210, 39928, 2015, 3860, 4480, 9752, 20130, 35158, 28528, 48553, 14687, 28753, 1671, 9336, 13130, 16752, 18565, 19157, 33656, 48205, 19652, 49223, 453, 3168, 4215, 4233, 22854, 23722, 35503, 39334, 43028, 43556, 48231, 48767, 39944, 851, 2169, 9915, 20826, 21769, 22187, 26153, 28348, 29789, 29914, 30403, 33371, 35344, 41028, 41516, 467, 1712, 2711, 2722, 6450, 7164, 8958, 9121, 9988, 10157, 10357, 10528, 10977, 15729, 15945, 17241, 17728, 18112, 19090, 21758, 22855, 23004, 24022, 25311, 25654, 26734, 27491, 28027, 29569, 30059, 30294, 30576, 30786, 31195, 32358, 32825, 33086, 33087, 35001, 35903, 38395, 38795, 40491, 42464, 43386, 43560, 44150, 44743, 45338, 45339, 45974, 45975, 46618, 46960, 47095, 47285, 48023, 48414, 48771, 10653, 43312, 932, 1662, 8629, 10638, 17168, 18128, 20411, 22457, 27056, 29036, 31041, 32889, 33140, 36995, 39321, 40164, 43946, 48925, 34608, 7835, 19518, 6137, 3254, 6993, 13392, 17851, 18038, 18231, 26381, 31069, 31517, 33952, 2896, 14602, 16501, 46818, 7094, 4675, 47564, 49146, 2322, 3746, 4707, 26184, 32929, 33429, 47704, 28853, 6738, 11868, 13251, 35615, 3766, 15052, 15918, 21063, 25096, 36716, 11337, 3189, 10020, 22023, 29061, 19030, 31826, 7633, 46815, 4749, 17090, 25418, 17625, 36446, 38638, 12327, 45063, 49162, 4016, 1458, 12920, 26476, 35372, 35524, 42052, 48187, 49706, 6305, 44684, 4246, 9924, 23079, 36727, 46200, 11753, 11299, 15795, 34153, 39679, 5053, 32421, 31917, 18677, 42243, 20799, 16066, 29611, 8016, 8446, 913, 4832, 5681, 10359, 11660, 19547, 23538, 28317, 29793, 31022, 33374, 33627, 33892, 33893, 36959, 41035, 41369, 42536, 43401, 48115, 49621, 49622, 10077, 14179, 15019, 2567, 6161, 9080, 42740, 3391, 26291, 38659, 7510, 21773, 47622, 9338, 26644, 12196, 29821, 31573, 40106, 1709, 7691, 9605, 11311, 14253, 16911, 36417, 43001, 2336, 5148, 6160, 19106, 26328, 34247, 8060, 19406, 1353, 10139, 11344, 11442, 11552, 19926, 24716, 27226, 32879, 36293, 38472, 41559, 48892, 43602, 8864, 8886, 16737, 19288, 22652, 26584, 30353, 37861, 39015, 39602, 41429, 33461, 6203, 32215, 34979, 38373, 46428, 49480, 6521, 14864, 1348, 14749, 8665, 25484, 3298, 3522, 8035, 11181, 19214, 23881, 24280, 3608, 3828, 11515, 21069, 27292, 8871, 44492, 13780, 47720, 10921, 31846, 9045, 44826, 1258, 2709, 3288, 3311, 16930, 20332, 24838, 27688, 29224, 34162, 46811, 48165, 36634, 31753, 2308, 7897, 8532, 13774, 19450, 39757, 44527, 5447, 24309, 34006, 3964, 8603, 12764, 1128, 6171, 7154, 7462, 12227, 14012, 23488, 24256, 27100, 39695, 42562, 42563, 42741, 44250, 44251, 48872, 49663, 8630, 1254, 4033, 10169, 31239, 49907, 29459, 18610, 6498, 27136, 30737, 2907, 14885, 20068, 34504, 40183, 15366, 29927, 14771, 10854, 18707, 42426, 49964, 3356, 14792, 19277, 1123, 4705, 4979, 10444, 24255, 25794, 29987, 30114, 40565, 42561, 44552, 35191, 1204, 2640, 4234, 9965, 11967, 18438, 24373, 24836, 37313, 45456, 2191, 6130], gradient_accumulation_steps=16, learning_rate=0.0001, line_by_line=True, local_rank=0, logging_steps=500, max_grad_norm=1.0, max_steps=-1, mlm=True, mlm_probability=0.1, model_name_or_path=None, model_type='roberta', n_gpu=2, no_cuda=False, num_train_epochs=40.0, output_dir='./sample_model/', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=4, per_gpu_train_batch_size=16, rank=0, save_steps=20, save_total_limit=5, seed=42, server_ip='', server_port='', should_continue=False, target_dictionary_file='./sample_config/given_dict.json', tokenizer_name='./sample_config', train_data_file='./data/sample.txt', warmup_steps=0, weight_decay=0.0, world_size=4)
+I0630 21:53:08.179493 47410044886720 configuration_utils.py:319] Model config RobertaConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": 0,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": 2,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "min_length": 0,
+  "model_type": "roberta",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50000
+}
+
+I0630 21:53:08.179656 47410044886720 tokenization_utils.py:420] Model name './sample_config' not found in model shortcut name list (roberta-base, roberta-large, roberta-large-mnli, distilroberta-base, roberta-base-openai-detector, roberta-large-openai-detector). Assuming './sample_config' is a path, a model identifier, or url to a directory containing tokenizer files.
+I0630 21:53:08.179743 47293318074048 configuration_utils.py:281] loading configuration file ./sample_config/config.json
+I0630 21:53:08.180297 47293318074048 configuration_utils.py:319] Model config RobertaConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": 0,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": 2,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "min_length": 0,
+  "model_type": "roberta",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50000
+}
+
+I0630 21:53:08.180477 47293318074048 tokenization_utils.py:420] Model name './sample_config' not found in model shortcut name list (roberta-base, roberta-large, roberta-large-mnli, distilroberta-base, roberta-base-openai-detector, roberta-large-openai-detector). Assuming './sample_config' is a path, a model identifier, or url to a directory containing tokenizer files.
+I0630 21:53:08.182290 47410044886720 tokenization_utils.py:449] Didn't find file ./sample_config/added_tokens.json. We won't load it.
+I0630 21:53:08.182312 47293318074048 tokenization_utils.py:449] Didn't find file ./sample_config/added_tokens.json. We won't load it.
+I0630 21:53:08.182703 47293318074048 tokenization_utils.py:449] Didn't find file ./sample_config/special_tokens_map.json. We won't load it.
+I0630 21:53:08.182706 47410044886720 tokenization_utils.py:449] Didn't find file ./sample_config/special_tokens_map.json. We won't load it.
+I0630 21:53:08.183525 47293318074048 tokenization_utils.py:502] loading file ./sample_config/vocab.json
+I0630 21:53:08.183527 47410044886720 tokenization_utils.py:502] loading file ./sample_config/vocab.json
+I0630 21:53:08.183613 47410044886720 tokenization_utils.py:502] loading file ./sample_config/merges.txt
+I0630 21:53:08.183657 47293318074048 tokenization_utils.py:502] loading file ./sample_config/merges.txt
+I0630 21:53:08.183757 47410044886720 tokenization_utils.py:502] loading file None
+I0630 21:53:08.183777 47293318074048 tokenization_utils.py:502] loading file None
+I0630 21:53:08.183845 47293318074048 tokenization_utils.py:502] loading file None
+I0630 21:53:08.183891 47410044886720 tokenization_utils.py:502] loading file None
+I0630 21:53:08.183950 47293318074048 tokenization_utils.py:502] loading file ./sample_config/tokenizer_config.json
+I0630 21:53:08.184019 47410044886720 tokenization_utils.py:502] loading file ./sample_config/tokenizer_config.json
+I0630 21:53:08.210448 47450424180416 run_language_modeling.py:114] Creating features from dataset file at ./data/sample.txt
+I0630 21:53:08.210541 47250932383424 run_language_modeling.py:114] Creating features from dataset file at ./data/sample.txt
+I0630 21:53:08.318576 47293318074048 run_language_modeling.py:740] Training new model from scratch
+I0630 21:53:08.319684 47410044886720 run_language_modeling.py:740] Training new model from scratch
+I0630 21:53:13.100881 47410044886720 run_language_modeling.py:748] Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=512, cache_dir=None, config_name='./sample_config', device=device(type='cuda', index=1), do_eval=False, do_train=True, eval_all_checkpoints=False, eval_data_file=None, evaluate_during_training=False, fp16=False, fp16_opt_level='O1', given_dictionary=[15756, 38606, 9747, 27207, 38422, 12259, 41717, 2351, 10953, 29668, 7246, 41205, 36574, 18777, 20671, 26098, 3569, 30628, 36713, 2793, 23061, 32180, 2148, 9603, 25927, 31584, 33933, 5211, 34190, 3476, 12243, 17245, 20561, 40258, 3655, 15137, 1839, 7493, 19327, 25503, 5238, 15684, 24290, 7740, 27578, 39838, 36227, 27513, 3431, 15319, 24737, 26336, 28684, 29252, 31969, 31920, 2708, 5993, 16758, 21070, 49861, 47377, 48339, 18992, 5534, 7758, 13333, 15534, 17802, 25705, 26631, 30669, 39815, 43822, 3947, 14383, 3583, 5475, 11167, 14454, 3559, 22834, 23020, 4826, 19811, 45610, 15168, 3203, 11497, 22109, 25220, 35711, 46704, 48292, 16123, 2389, 9472, 1780, 5086, 30002, 2856, 8278, 11496, 19161, 25463, 28090, 35705, 12919, 5987, 7123, 14893, 19879, 23238, 2032, 3023, 4548, 7324, 20840, 30034, 31272, 31497, 41784, 49771, 4358, 8331, 17535, 10435, 4344, 9840, 13709, 7430, 10142, 17508, 23064, 18190, 20250, 47033, 12473, 18586, 2215, 2611, 6903, 8066, 24070, 29038, 13694, 26361, 32713, 2474, 3069, 6656, 27718, 32675, 21341, 31579, 28308, 32768, 7496, 22010, 27997, 17532, 21559, 42324, 16326, 31495, 38127, 7901, 13249, 13466, 30491, 39398, 2807, 10048, 16927, 21868, 28180, 34189, 7146, 14833, 19131, 25116, 34256, 11307, 20362, 32263, 22828, 6403, 29026, 46062, 37297, 3597, 4063, 4365, 9414, 31977, 45605, 6252, 19440, 31351, 11648, 20491, 1495, 8134, 18759, 1062, 5496, 11661, 14508, 24368, 26466, 28654, 34166, 42551, 42552, 49652, 1275, 5268, 10410, 12521, 14207, 14563, 35654, 44843, 3265, 8416, 10686, 19213, 21625, 24799, 49011, 563, 1144, 1987, 2731, 12093, 18890, 24601, 32403, 33587, 33866, 35910, 40613, 46777, 48232, 48547, 49276, 49326, 49809, 39938, 28409, 16442, 43984, 17714, 18212, 44799, 49589, 29562, 31184, 6356, 14641, 19287, 36773, 46932, 8621, 37038, 49850, 11928, 29263, 11779, 46831, 10905, 8152, 19407, 27754, 33997, 35155, 42201, 43854, 47201, 47628, 2912, 11269, 20481, 23977, 36340, 36341, 44929, 48282, 1878, 17596, 19273, 26035, 36109, 36129, 14005, 20783, 2313, 23878, 44905, 28351, 5783, 48353, 16018, 4924, 7971, 1639, 787, 15354, 21383, 25197, 29972, 29973, 31451, 33620, 36622, 38838, 39277, 43088, 45410, 45411, 47366, 48829, 49601, 902, 4955, 5242, 5768, 6183, 9587, 27093, 42533, 44818, 48113, 48347, 3893, 10518, 4082, 8645, 2283, 5908, 6956, 13953, 18126, 18338, 25682, 34508, 44325, 47488, 48974, 49786, 16330, 27411, 15147, 1797, 3272, 5511, 16226, 48215, 18194, 19291, 39022, 21517, 27210, 39928, 2015, 3860, 4480, 9752, 20130, 35158, 28528, 48553, 14687, 28753, 1671, 9336, 13130, 16752, 18565, 19157, 33656, 48205, 19652, 49223, 453, 3168, 4215, 4233, 22854, 23722, 35503, 39334, 43028, 43556, 48231, 48767, 39944, 851, 2169, 9915, 20826, 21769, 22187, 26153, 28348, 29789, 29914, 30403, 33371, 35344, 41028, 41516, 467, 1712, 2711, 2722, 6450, 7164, 8958, 9121, 9988, 10157, 10357, 10528, 10977, 15729, 15945, 17241, 17728, 18112, 19090, 21758, 22855, 23004, 24022, 25311, 25654, 26734, 27491, 28027, 29569, 30059, 30294, 30576, 30786, 31195, 32358, 32825, 33086, 33087, 35001, 35903, 38395, 38795, 40491, 42464, 43386, 43560, 44150, 44743, 45338, 45339, 45974, 45975, 46618, 46960, 47095, 47285, 48023, 48414, 48771, 10653, 43312, 932, 1662, 8629, 10638, 17168, 18128, 20411, 22457, 27056, 29036, 31041, 32889, 33140, 36995, 39321, 40164, 43946, 48925, 34608, 7835, 19518, 6137, 3254, 6993, 13392, 17851, 18038, 18231, 26381, 31069, 31517, 33952, 2896, 14602, 16501, 46818, 7094, 4675, 47564, 49146, 2322, 3746, 4707, 26184, 32929, 33429, 47704, 28853, 6738, 11868, 13251, 35615, 3766, 15052, 15918, 21063, 25096, 36716, 11337, 3189, 10020, 22023, 29061, 19030, 31826, 7633, 46815, 4749, 17090, 25418, 17625, 36446, 38638, 12327, 45063, 49162, 4016, 1458, 12920, 26476, 35372, 35524, 42052, 48187, 49706, 6305, 44684, 4246, 9924, 23079, 36727, 46200, 11753, 11299, 15795, 34153, 39679, 5053, 32421, 31917, 18677, 42243, 20799, 16066, 29611, 8016, 8446, 913, 4832, 5681, 10359, 11660, 19547, 23538, 28317, 29793, 31022, 33374, 33627, 33892, 33893, 36959, 41035, 41369, 42536, 43401, 48115, 49621, 49622, 10077, 14179, 15019, 2567, 6161, 9080, 42740, 3391, 26291, 38659, 7510, 21773, 47622, 9338, 26644, 12196, 29821, 31573, 40106, 1709, 7691, 9605, 11311, 14253, 16911, 36417, 43001, 2336, 5148, 6160, 19106, 26328, 34247, 8060, 19406, 1353, 10139, 11344, 11442, 11552, 19926, 24716, 27226, 32879, 36293, 38472, 41559, 48892, 43602, 8864, 8886, 16737, 19288, 22652, 26584, 30353, 37861, 39015, 39602, 41429, 33461, 6203, 32215, 34979, 38373, 46428, 49480, 6521, 14864, 1348, 14749, 8665, 25484, 3298, 3522, 8035, 11181, 19214, 23881, 24280, 3608, 3828, 11515, 21069, 27292, 8871, 44492, 13780, 47720, 10921, 31846, 9045, 44826, 1258, 2709, 3288, 3311, 16930, 20332, 24838, 27688, 29224, 34162, 46811, 48165, 36634, 31753, 2308, 7897, 8532, 13774, 19450, 39757, 44527, 5447, 24309, 34006, 3964, 8603, 12764, 1128, 6171, 7154, 7462, 12227, 14012, 23488, 24256, 27100, 39695, 42562, 42563, 42741, 44250, 44251, 48872, 49663, 8630, 1254, 4033, 10169, 31239, 49907, 29459, 18610, 6498, 27136, 30737, 2907, 14885, 20068, 34504, 40183, 15366, 29927, 14771, 10854, 18707, 42426, 49964, 3356, 14792, 19277, 1123, 4705, 4979, 10444, 24255, 25794, 29987, 30114, 40565, 42561, 44552, 35191, 1204, 2640, 4234, 9965, 11967, 18438, 24373, 24836, 37313, 45456, 2191, 6130], gradient_accumulation_steps=16, learning_rate=0.0001, line_by_line=True, local_rank=1, logging_steps=500, max_grad_norm=1.0, max_steps=-1, mlm=True, mlm_probability=0.1, model_name_or_path=None, model_type='roberta', n_gpu=2, no_cuda=False, num_train_epochs=40.0, output_dir='./sample_model/', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=4, per_gpu_train_batch_size=16, rank=1, save_steps=20, save_total_limit=5, seed=42, server_ip='', server_port='', should_continue=False, target_dictionary_file='./sample_config/given_dict.json', tokenizer_name='./sample_config', train_data_file='./data/sample.txt', warmup_steps=0, weight_decay=0.0, world_size=4)
+I0630 21:53:24.116909 47293318074048 run_language_modeling.py:748] Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=512, cache_dir=None, config_name='./sample_config', device=device(type='cuda', index=1), do_eval=False, do_train=True, eval_all_checkpoints=False, eval_data_file=None, evaluate_during_training=False, fp16=False, fp16_opt_level='O1', given_dictionary=[15756, 38606, 9747, 27207, 38422, 12259, 41717, 2351, 10953, 29668, 7246, 41205, 36574, 18777, 20671, 26098, 3569, 30628, 36713, 2793, 23061, 32180, 2148, 9603, 25927, 31584, 33933, 5211, 34190, 3476, 12243, 17245, 20561, 40258, 3655, 15137, 1839, 7493, 19327, 25503, 5238, 15684, 24290, 7740, 27578, 39838, 36227, 27513, 3431, 15319, 24737, 26336, 28684, 29252, 31969, 31920, 2708, 5993, 16758, 21070, 49861, 47377, 48339, 18992, 5534, 7758, 13333, 15534, 17802, 25705, 26631, 30669, 39815, 43822, 3947, 14383, 3583, 5475, 11167, 14454, 3559, 22834, 23020, 4826, 19811, 45610, 15168, 3203, 11497, 22109, 25220, 35711, 46704, 48292, 16123, 2389, 9472, 1780, 5086, 30002, 2856, 8278, 11496, 19161, 25463, 28090, 35705, 12919, 5987, 7123, 14893, 19879, 23238, 2032, 3023, 4548, 7324, 20840, 30034, 31272, 31497, 41784, 49771, 4358, 8331, 17535, 10435, 4344, 9840, 13709, 7430, 10142, 17508, 23064, 18190, 20250, 47033, 12473, 18586, 2215, 2611, 6903, 8066, 24070, 29038, 13694, 26361, 32713, 2474, 3069, 6656, 27718, 32675, 21341, 31579, 28308, 32768, 7496, 22010, 27997, 17532, 21559, 42324, 16326, 31495, 38127, 7901, 13249, 13466, 30491, 39398, 2807, 10048, 16927, 21868, 28180, 34189, 7146, 14833, 19131, 25116, 34256, 11307, 20362, 32263, 22828, 6403, 29026, 46062, 37297, 3597, 4063, 4365, 9414, 31977, 45605, 6252, 19440, 31351, 11648, 20491, 1495, 8134, 18759, 1062, 5496, 11661, 14508, 24368, 26466, 28654, 34166, 42551, 42552, 49652, 1275, 5268, 10410, 12521, 14207, 14563, 35654, 44843, 3265, 8416, 10686, 19213, 21625, 24799, 49011, 563, 1144, 1987, 2731, 12093, 18890, 24601, 32403, 33587, 33866, 35910, 40613, 46777, 48232, 48547, 49276, 49326, 49809, 39938, 28409, 16442, 43984, 17714, 18212, 44799, 49589, 29562, 31184, 6356, 14641, 19287, 36773, 46932, 8621, 37038, 49850, 11928, 29263, 11779, 46831, 10905, 8152, 19407, 27754, 33997, 35155, 42201, 43854, 47201, 47628, 2912, 11269, 20481, 23977, 36340, 36341, 44929, 48282, 1878, 17596, 19273, 26035, 36109, 36129, 14005, 20783, 2313, 23878, 44905, 28351, 5783, 48353, 16018, 4924, 7971, 1639, 787, 15354, 21383, 25197, 29972, 29973, 31451, 33620, 36622, 38838, 39277, 43088, 45410, 45411, 47366, 48829, 49601, 902, 4955, 5242, 5768, 6183, 9587, 27093, 42533, 44818, 48113, 48347, 3893, 10518, 4082, 8645, 2283, 5908, 6956, 13953, 18126, 18338, 25682, 34508, 44325, 47488, 48974, 49786, 16330, 27411, 15147, 1797, 3272, 5511, 16226, 48215, 18194, 19291, 39022, 21517, 27210, 39928, 2015, 3860, 4480, 9752, 20130, 35158, 28528, 48553, 14687, 28753, 1671, 9336, 13130, 16752, 18565, 19157, 33656, 48205, 19652, 49223, 453, 3168, 4215, 4233, 22854, 23722, 35503, 39334, 43028, 43556, 48231, 48767, 39944, 851, 2169, 9915, 20826, 21769, 22187, 26153, 28348, 29789, 29914, 30403, 33371, 35344, 41028, 41516, 467, 1712, 2711, 2722, 6450, 7164, 8958, 9121, 9988, 10157, 10357, 10528, 10977, 15729, 15945, 17241, 17728, 18112, 19090, 21758, 22855, 23004, 24022, 25311, 25654, 26734, 27491, 28027, 29569, 30059, 30294, 30576, 30786, 31195, 32358, 32825, 33086, 33087, 35001, 35903, 38395, 38795, 40491, 42464, 43386, 43560, 44150, 44743, 45338, 45339, 45974, 45975, 46618, 46960, 47095, 47285, 48023, 48414, 48771, 10653, 43312, 932, 1662, 8629, 10638, 17168, 18128, 20411, 22457, 27056, 29036, 31041, 32889, 33140, 36995, 39321, 40164, 43946, 48925, 34608, 7835, 19518, 6137, 3254, 6993, 13392, 17851, 18038, 18231, 26381, 31069, 31517, 33952, 2896, 14602, 16501, 46818, 7094, 4675, 47564, 49146, 2322, 3746, 4707, 26184, 32929, 33429, 47704, 28853, 6738, 11868, 13251, 35615, 3766, 15052, 15918, 21063, 25096, 36716, 11337, 3189, 10020, 22023, 29061, 19030, 31826, 7633, 46815, 4749, 17090, 25418, 17625, 36446, 38638, 12327, 45063, 49162, 4016, 1458, 12920, 26476, 35372, 35524, 42052, 48187, 49706, 6305, 44684, 4246, 9924, 23079, 36727, 46200, 11753, 11299, 15795, 34153, 39679, 5053, 32421, 31917, 18677, 42243, 20799, 16066, 29611, 8016, 8446, 913, 4832, 5681, 10359, 11660, 19547, 23538, 28317, 29793, 31022, 33374, 33627, 33892, 33893, 36959, 41035, 41369, 42536, 43401, 48115, 49621, 49622, 10077, 14179, 15019, 2567, 6161, 9080, 42740, 3391, 26291, 38659, 7510, 21773, 47622, 9338, 26644, 12196, 29821, 31573, 40106, 1709, 7691, 9605, 11311, 14253, 16911, 36417, 43001, 2336, 5148, 6160, 19106, 26328, 34247, 8060, 19406, 1353, 10139, 11344, 11442, 11552, 19926, 24716, 27226, 32879, 36293, 38472, 41559, 48892, 43602, 8864, 8886, 16737, 19288, 22652, 26584, 30353, 37861, 39015, 39602, 41429, 33461, 6203, 32215, 34979, 38373, 46428, 49480, 6521, 14864, 1348, 14749, 8665, 25484, 3298, 3522, 8035, 11181, 19214, 23881, 24280, 3608, 3828, 11515, 21069, 27292, 8871, 44492, 13780, 47720, 10921, 31846, 9045, 44826, 1258, 2709, 3288, 3311, 16930, 20332, 24838, 27688, 29224, 34162, 46811, 48165, 36634, 31753, 2308, 7897, 8532, 13774, 19450, 39757, 44527, 5447, 24309, 34006, 3964, 8603, 12764, 1128, 6171, 7154, 7462, 12227, 14012, 23488, 24256, 27100, 39695, 42562, 42563, 42741, 44250, 44251, 48872, 49663, 8630, 1254, 4033, 10169, 31239, 49907, 29459, 18610, 6498, 27136, 30737, 2907, 14885, 20068, 34504, 40183, 15366, 29927, 14771, 10854, 18707, 42426, 49964, 3356, 14792, 19277, 1123, 4705, 4979, 10444, 24255, 25794, 29987, 30114, 40565, 42561, 44552, 35191, 1204, 2640, 4234, 9965, 11967, 18438, 24373, 24836, 37313, 45456, 2191, 6130], gradient_accumulation_steps=16, learning_rate=0.0001, line_by_line=True, local_rank=1, logging_steps=500, max_grad_norm=1.0, max_steps=-1, mlm=True, mlm_probability=0.1, model_name_or_path=None, model_type='roberta', n_gpu=2, no_cuda=False, num_train_epochs=40.0, output_dir='./sample_model/', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=4, per_gpu_train_batch_size=16, rank=1, save_steps=20, save_total_limit=5, seed=42, server_ip='', server_port='', should_continue=False, target_dictionary_file='./sample_config/given_dict.json', tokenizer_name='./sample_config', train_data_file='./data/sample.txt', warmup_steps=0, weight_decay=0.0, world_size=4)
+I0630 21:53:24.121590 47293318074048 run_language_modeling.py:114] Creating features from dataset file at ./data/sample.txt
+I0630 21:53:24.121724 47410044886720 run_language_modeling.py:114] Creating features from dataset file at ./data/sample.txt
+Distributed training:  0
+Distributed training:  0
+I0630 21:53:24.265388 47450424180416 run_language_modeling.py:292] ***** Running training *****
+I0630 21:53:24.265751 47450424180416 run_language_modeling.py:293]   Num examples = 20000
+I0630 21:53:24.267100 47450424180416 run_language_modeling.py:294]   Num Epochs = 40
+I0630 21:53:24.267657 47450424180416 run_language_modeling.py:295]   Instantaneous batch size per GPU = 16
+I0630 21:53:24.267750 47450424180416 run_language_modeling.py:300]   Total train batch size (w. parallel, distributed & accumulation) = 2048
+I0630 21:53:24.267815 47450424180416 run_language_modeling.py:302]   Gradient Accumulation steps = 16
+I0630 21:53:24.267951 47450424180416 run_language_modeling.py:303]   Total optimization steps = 360
+Epoch:   0%|          | 0/40 [00:00<?, ?it/s]
+Distributed training:  1
+Distributed training:  1
+I0630 21:53:32.960198 47410044886720 run_language_modeling.py:292] ***** Running training *****
+I0630 21:53:32.960502 47410044886720 run_language_modeling.py:293]   Num examples = 20000
+I0630 21:53:32.961955 47410044886720 run_language_modeling.py:294]   Num Epochs = 40
+I0630 21:53:32.963129 47410044886720 run_language_modeling.py:295]   Instantaneous batch size per GPU = 16
+I0630 21:53:32.963318 47410044886720 run_language_modeling.py:300]   Total train batch size (w. parallel, distributed & accumulation) = 2048
+I0630 21:53:32.963451 47410044886720 run_language_modeling.py:302]   Gradient Accumulation steps = 16
+I0630 21:53:32.963599 47410044886720 run_language_modeling.py:303]   Total optimization steps = 360
+Iteration:   0%|          | 0/157 [00:00<?, ?it/s][ATraceback (most recent call last):
+  File "run_language_modeling.py", line 810, in <module>
+    main()
+  File "run_language_modeling.py", line 760, in main
+    global_step, tr_loss = train(args, train_dataset, model, tokenizer)
+  File "run_language_modeling.py", line 289, in train
+    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank)
+  File "/home/chiyu94/roberta/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 303, in __init__
+    self.broadcast_bucket_size)
+  File "/home/chiyu94/roberta/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 485, in _distributed_broadcast_coalesced
+    dist._broadcast_coalesced(self.process_group, tensors, buffer_size)
+RuntimeError: Socket Timeout
+Traceback (most recent call last):
+  File "run_language_modeling.py", line 810, in <module>
+    main()
+  File "run_language_modeling.py", line 760, in main
+    global_step, tr_loss = train(args, train_dataset, model, tokenizer)
+  File "run_language_modeling.py", line 289, in train
+    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank)
+  File "/home/chiyu94/roberta/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 303, in __init__
+    self.broadcast_bucket_size)
+  File "/home/chiyu94/roberta/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 485, in _distributed_broadcast_coalesced
+    dist._broadcast_coalesced(self.process_group, tensors, buffer_size)
+RuntimeError: Socket Timeout
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/python/3.6.3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/python/3.6.3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/chiyu94/roberta/lib/python3.6/site-packages/torch/distributed/launch.py", line 263, in <module>
+    main()
+  File "/home/chiyu94/roberta/lib/python3.6/site-packages/torch/distributed/launch.py", line 259, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/chiyu94/roberta/bin/python3', '-u', 'run_language_modeling.py', '--local_rank=1', '--gradient_accumulation_steps', '16', '--train_data_file', './data/sample.txt', '--target_dictionary_file', './sample_config/given_dict.json', '--output_dir', './sample_model/', '--model_type', 'roberta', '--mlm', '--local_rank', '1', '--config_name', './sample_config', '--tokenizer_name', './sample_config', '--do_train', '--line_by_line', '--learning_rate', '1e-4', '--num_train_epochs', '40', '--save_total_limit', '5', '--save_steps', '20', '--per_gpu_train_batch_size', '16', '--seed', '42']' returned non-zero exit status 1.
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+srun: error: cdr2589: task 1: Exited with exit code 1
+srun: Terminating job step 45021080.0
+slurmstepd: error: *** STEP 45021080.0 ON cdr2585 CANCELLED AT 2020-06-30T21:54:42 ***
+srun: error: cdr2585: task 0: Terminated
+srun: Force Terminated job step 45021080.0
