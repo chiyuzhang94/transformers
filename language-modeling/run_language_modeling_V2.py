@@ -286,7 +286,7 @@ def train(args, train_dataset, model: PreTrainedModel, tokenizer: PreTrainedToke
     # Distributed training (should be after apex fp16 initialization)
     if args.local_rank != -1:
         print("Distributed training: ", args.local_rank)
-        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank)
+        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank, find_unused_parameters=True)
 
     # Train!
     logger.info("***** Running training *****")
@@ -667,10 +667,14 @@ def main():
         print(args.local_rank)
         
         torch.distributed.init_process_group(backend="nccl", timeout=datetime.timedelta(minutes=1))
-        args.n_gpu = torch.cuda.device_count()
+        # args.n_gpu = torch.cuda.device_count()
         args.rank = int(os.environ['SLURM_PROCID'])
         args.world_size = torch.distributed.get_world_size()
-        device = torch.device("cuda:{}".format(args.local_rank))
+        # device = torch.device("cuda:{}".format(args.local_rank))
+        device = torch.device("cuda", args.local_rank)
+        print("device", device)
+        args.n_gpu = 1
+
 
     args.device = device
 

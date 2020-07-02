@@ -18,7 +18,7 @@ python3 -m torch.distributed.launch \
 		--output_dir ./sample_model/ \
 		--model_type roberta \
 		--mlm \
-		--local_rank $SLURM_PROCID \
+		--local_rank $SLURM_LOCALID \
 		--config_name ./sample_config \
 		--tokenizer_name ./sample_config \
 		--do_train \
