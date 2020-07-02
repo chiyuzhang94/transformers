@@ -16,7 +16,6 @@ module load cuda/10.0.130 cudnn
 module load openmpi nccl/2.5.6
 
 source ~/roberta/bin/activate
-export NCCL_SOCKET_IFNAME=eth0
 export NCCL_DEBUG=INFO
 export NPROC_PER_NODE=2
 export HDF5_USE_FILE_LOCKING='FALSE'
