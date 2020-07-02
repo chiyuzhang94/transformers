@@ -11,12 +11,12 @@
 #SBATCH --mail-user=zcy94@outlook.com
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-type=END
-module load cuda cudnn
-module load gcc
-module load openmpi
+module load gcc/7.3.0
+module load cuda/10.0.130 cudnn
+module load openmpi nccl/2.5.6
 
 source ~/roberta/bin/activate
-
+export NCCL_SOCKET_IFNAME=eth0
 export NCCL_DEBUG=INFO
 export NPROC_PER_NODE=2
 export HDF5_USE_FILE_LOCKING='FALSE'

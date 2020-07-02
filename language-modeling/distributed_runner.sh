@@ -1,11 +1,11 @@
 #!/bin/bash
 
-source ~/roberta/bin/activate
 /bin/hostname -s
+echo $NCCL_SOCKET_IFNAME
+echo "num nodes, $NPROC_PER_NODE"
 echo "PROCID: $SLURM_PROCID"
 echo "LOCALID: $SLURM_LOCALID"
 source ~/roberta/bin/activate
-
 python3 -m torch.distributed.launch \
 		--nproc_per_node=$NPROC_PER_NODE \
 		--nnodes=$SLURM_JOB_NUM_NODES \
