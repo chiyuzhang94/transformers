@@ -114,12 +114,6 @@ def token_encode(examples):
 def HG_Datasets(tokenizer, file_path, args):
     
     dataset = load_from_disk(file_path)
-    # path = Path(file_path)
-    # files = sorted(path.glob('*'))
-    # dataset = load_dataset('/scratch/st-amuham01-1/chiyuzh/roberta_emohash/text.py', data_files=files, cache_dir = args.data_cache_dir, split="train")
-    # dataset = dataset.map(token_encode, batched=True, batch_size = 10000, num_proc = 16)
-
-    # dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
     return dataset
 
 def make_collate(tokenizer, block_size, lazy=False):
